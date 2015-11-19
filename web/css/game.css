@@ -1,0 +1,39 @@
+
+body {
+    background-color: #303030;
+
+}
+
+div#actions {
+    background-color: #606060;
+
+    height: 300px;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+#actions > * {
+    background: #606060 no-repeat;
+    background-size: contain;
+
+    /*position: relative;*/
+    width: 8vw;
+    height: 8vw;
+}
+
+.WAIT {
+    background-image: url("../img/actions/wait.png");
+}
+
+.ENTER {
+    background-image: url("../img/actions/enter.png");
+}
+
+.DESCEND {
+    background-image: url("../img/actions/descend.png");
+}
+
+.EXIT {
+    background-image: url("../img/actions/exit.png");
+}
