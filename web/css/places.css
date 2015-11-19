@@ -1,0 +1,27 @@
+
+div#place{
+    background-color: #606390;
+    background-repeat:no-repeat;
+    background-size:contain;
+
+    height: 25vw;
+    width: 25vw;
+
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -65%)
+}
+
+div#place.WOODS{
+    background-image: url("../img/places/woods.png");
+}
+div#place.GRAVEYARD{
+    background-image: url("../img/places/graveyard.png");
+}
+div#place.MINES{
+    background-image: url("../img/places/mines.png");
+}

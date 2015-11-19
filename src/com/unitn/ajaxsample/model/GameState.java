@@ -5,15 +5,10 @@
  */
 package com.unitn.ajaxsample.model;
 
+import javax.xml.bind.annotation.*;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- *
  * @author demiurgo
  */
 @XmlRootElement(name = "gameState")
@@ -23,6 +18,9 @@ public class GameState {
     @XmlElementWrapper(name = "actions")
     @XmlElement(name = "action")
     private List<Action> actions;
+
+    @XmlElement(name="place")
+    private Place place;
 
     public GameState() {
     }
@@ -35,5 +33,11 @@ public class GameState {
         return actions;
     }
 
+    public Place getPlace() {
+        return place;
+    }
 
+    public void setPlace(Place place) {
+        this.place = place;
+    }
 }

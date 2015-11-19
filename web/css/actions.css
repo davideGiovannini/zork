@@ -1,0 +1,62 @@
+
+
+div#actions{
+    /*background-color: #606060;*/
+    height: 10vw;
+    bottom: 0;
+    position: fixed;
+    left: 50%;
+    margin-bottom: 2em;
+    margin-right: -50%;
+    transform: translate(-50%, 0)
+}
+#actions > * {
+    display: inline-block;
+    background-color: #606060;
+    background-repeat:no-repeat;
+    background-size:contain;
+
+    border-radius: 1em;
+    padding: 1em;
+    margin-left: 1em;
+
+    width: 8vw;
+    height: 8vw;
+}
+
+#actions > *:hover
+{
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+    transform: translate(0, -5%)
+}
+
+#actions > *:active
+{
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #000;
+    box-shadow: 0 0 10px #000;
+    transform: translate(0, 5%)
+}
+
+
+#actions > *:last-child {
+    margin-right: 1em;
+}
+
+.WAIT{
+    background-image: url("../img/actions/wait.png");
+}
+
+.ENTER{
+    background-image: url("../img/actions/enter.png");
+}
+
+.DESCEND{
+    background-image: url("../img/actions/descend.png");
+}
+
+.EXIT{
+    background-image: url("../img/actions/exit.png");
+}

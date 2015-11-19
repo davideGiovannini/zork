@@ -7,6 +7,7 @@ package com.unitn.ajaxsample.servlets;
 
 import com.unitn.ajaxsample.model.Action;
 import com.unitn.ajaxsample.model.GameState;
+import com.unitn.ajaxsample.model.Place;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -18,12 +19,17 @@ import javax.xml.bind.Marshaller;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+
+import static com.unitn.ajaxsample.model.Place.PlaceType.*;
 
 /**
  *
  * @author demiurgo
  */
 public class GameServlet extends HttpServlet {
+
+    Random random = new Random();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -38,6 +44,11 @@ public class GameServlet extends HttpServlet {
         actions.add(new Action(Action.ActionType.EXIT));
 
         state.setActions(actions);
+
+        Place place = new Place();
+        place.setPlaceType(values()[random.nextInt(values().length)]);
+        state.setPlace(place);
+
 
         try {
             JAXBContext context = JAXBContext.newInstance(GameState.class);

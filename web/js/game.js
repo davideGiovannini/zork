@@ -43,23 +43,30 @@ var doGet = function(path, callback){
 
 var refreshState = function(){
     doGet("game", function(xhttp){
-        var xml = xhttp.responseXML;
-        var actions = document.getElementById("actions");
-        var xActions = xml.getElementsByTagName("action");
-        var i;
-        var node;
+        var xml = xhttp.responseXML,
+            actions = document.getElementById("actions"),
+            place = document.getElementById("place"),
+            xActions = xml.getElementsByTagName("action"),
+            xPlace = xml.getElementsByTagName("place")[0],
+            i,
+            node;
 
         //CleanUp actions
         while(actions.firstChild) {
             actions.removeChild(actions.firstChild);
         }
 
+        //Set actions
         for (i = 0; i < xActions.length; i++) {
             node = document.createElement("div");
             node.setAttribute("class", xActions[i].getAttribute("class"));
             node.setAttribute("onClick", "postAction(\""+node.getAttribute("class")+"\")");
             actions.appendChild(node);
         }
+
+        //Set place
+        place.setAttribute("class", xPlace.getAttribute("class"));
+
     });
 
 };
