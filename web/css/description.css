@@ -1,0 +1,16 @@
+
+
+div#actions > *:hover > h1.action_description{
+    color: #FFF;
+    bottom: 0;
+    position: fixed;
+    left: 50%;
+    margin-bottom: 2em;
+    margin-right: -50%;
+    transform: translate(-50%, -10vw);
+    opacity: 255;
+}
+
+div#actions > * > h1.action_description{
+    opacity: 0;
+}

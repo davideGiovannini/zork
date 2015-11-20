@@ -57,7 +57,7 @@ var updateStateFromXML = function (xhttp) {
         xActions = xml.getElementsByTagName("action"),
         xPlace = xml.getElementsByTagName("place")[0],
         i,
-        node;
+        node, text;
 
     //CleanUp actions
     while (actions.firstChild) {
@@ -67,8 +67,15 @@ var updateStateFromXML = function (xhttp) {
     //Set actions
     for (i = 0; i < xActions.length; i++) {
         node = document.createElement("div");
+        text = document.createElement("h1");
         node.setAttribute("class", xActions[i].getAttribute("class"));
         node.setAttribute("onClick", "postAction(\"" + node.getAttribute("class") + "\")");
+
+        text.setAttribute("class", "action_description");
+        text.innerHTML = node.getAttribute("class");
+
+        node.appendChild(text);
+
         actions.appendChild(node);
     }
 
