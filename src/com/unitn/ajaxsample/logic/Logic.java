@@ -20,7 +20,7 @@ public class Logic {
 
     public static void update(GameState state, final Action action){
         // UPDATE LOCATION
-        state.getPlace().performAction(action);
+        state.getPlace().performAction(action, random);
 
         //UPDATE ACTIONS
         List<Action> actions = state.getActions();

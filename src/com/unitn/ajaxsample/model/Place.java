@@ -6,6 +6,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by demiurgo on 11/19/15.
@@ -63,7 +64,7 @@ public class Place {
     }
 
 
-    public void performAction(Action action){
+    public void performAction(Action action, Random random){
         switch (action.getType()){
             case WAIT:
                 break;
