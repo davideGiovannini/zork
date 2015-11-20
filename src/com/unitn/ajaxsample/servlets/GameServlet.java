@@ -69,7 +69,7 @@ public class GameServlet extends HttpServlet {
 
 
         GameState state = (GameState) session.getAttribute("gameState");
-        Logic.update(state, actionType);
+        Logic.update(state, new Action(actionType));
 
         writeGameState(state, response.getOutputStream());
 

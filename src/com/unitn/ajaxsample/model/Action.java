@@ -20,6 +20,11 @@ public class Action {
         this.type = type;
     }
 
+
+    public ActionType getType() {
+        return type;
+    }
+
     public static enum ActionType {
         WAIT, ENTER, EXIT, DESCEND, GET_CROWN, GO_NORTH, GO_WEST, GO_EAST, GO_SOUTH;
     }

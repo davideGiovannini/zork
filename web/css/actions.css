@@ -29,7 +29,6 @@ div#actions{
     -moz-box-shadow: 0 0 10px #ccc;
     -webkit-box-shadow: 0 0 10px #ccc;
     box-shadow: 0 0 10px #ccc;
-    transform: translate(0, -5%)
 }
 
 #actions > *:active
@@ -37,7 +36,6 @@ div#actions{
     -moz-box-shadow: 0 0 10px #ccc;
     -webkit-box-shadow: 0 0 10px #000;
     box-shadow: 0 0 10px #000;
-    transform: translate(0, 5%)
 }
 
 
@@ -63,4 +61,26 @@ div#actions{
 
 .GET_CROWN{
     background-image: url("../img/actions/get_crown.png");
+}
+
+
+.GO_NORTH{
+    background-image: url("../img/actions/arrow.png");
+    transform: rotate(180deg);
+
+}
+
+.GO_WEST{
+    background-image: url("../img/actions/arrow.png");
+    transform: rotate(90deg);
+
+}
+
+.GO_EAST{
+    background-image: url("../img/actions/arrow.png");
+    transform: rotate(-90deg);
+}
+
+.GO_SOUTH{
+    background-image: url("../img/actions/arrow.png");
 }

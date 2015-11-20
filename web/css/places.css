@@ -41,3 +41,7 @@ div#place.CASTLE{
 div#place.CHURCH{
     background-image: url("../img/places/church.png");
 }
+
+div#place.TOMB{
+    background-image: url("../img/places/tomb.png");
+}
