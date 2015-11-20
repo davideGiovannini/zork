@@ -72,7 +72,7 @@ var updateStateFromXML = function (xhttp) {
         node.setAttribute("onClick", "postAction(\"" + node.getAttribute("class") + "\")");
 
         text.setAttribute("class", "action_description");
-        text.innerHTML = node.getAttribute("class");
+        text.innerHTML = xActions[i].innerHTML;
 
         node.appendChild(text);
 
@@ -81,5 +81,6 @@ var updateStateFromXML = function (xhttp) {
 
     //Set place
     place.setAttribute("class", xPlace.getAttribute("class"));
-    document.getElementById("place_title").innerHTML = place.getAttribute("class");
+    document.getElementById("place_title").innerHTML = xPlace.innerHTML;
+
 };

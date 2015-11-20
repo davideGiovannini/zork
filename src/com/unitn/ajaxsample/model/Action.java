@@ -6,6 +6,7 @@
 package com.unitn.ajaxsample.model;
 
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlValue;
 
 /**
  *
@@ -15,6 +16,34 @@ public class Action {
 
     @XmlAttribute(name = "class")
     private final ActionType type;
+
+    @XmlValue
+    private String getActionDescription(){
+        switch (type) {
+            case WAIT:
+                return "Wait here";
+            case ENTER:
+                return "Enter";
+            case EXIT:
+                return "Exit";
+            case DESCEND:
+                return "Descend";
+            case GET_CROWN:
+                return "Get the crown";
+            case GO_NORTH:
+                return "Go north";
+            case GO_WEST:
+                return "Go west";
+            case GO_EAST:
+                return "Go east";
+            case GO_SOUTH:
+                return "Go south";
+            case RESTART_GAME:
+                return "New game";
+            default:
+                return type.name();
+        }
+    }
 
     public Action(ActionType type) {
         this.type = type;

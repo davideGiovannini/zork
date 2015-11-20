@@ -1,9 +1,6 @@
 package com.unitn.ajaxsample.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
@@ -17,6 +14,33 @@ public class Place {
 
     @XmlAttribute(name = "class")
     private PlaceType placeType;
+
+
+    @XmlValue
+    public String getPlaceDescription(){
+        switch (placeType) {
+            case GRAVEYARD:
+                return "The graveyard";
+            case WOODS:
+                return "The woods";
+            case MINES:
+                return "The mines";
+            case THRONE_ROOM:
+                return "The throne room";
+            case SWAMP:
+                return "The swamp";
+            case CASTLE:
+                return "The castle";
+            case CHURCH:
+                return "The church";
+            case TOMB:
+                return "A tombstone";
+            case CROWNED:
+                return "You got the crown!";
+            default:
+                return placeType.name();
+        }
+    }
 
 
 
