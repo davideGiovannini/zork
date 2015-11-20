@@ -25,3 +25,19 @@ div#place.GRAVEYARD{
 div#place.MINES{
     background-image: url("../img/places/mines.png");
 }
+
+div#place.THRONE_ROOM{
+    background-image: url("../img/places/throne_room.png");
+}
+
+div#place.SWAMP{
+    background-image: url("../img/places/swamp.png");
+}
+
+div#place.CASTLE{
+    background-image: url("../img/places/castle.png");
+}
+
+div#place.CHURCH{
+    background-image: url("../img/places/church.png");
+}

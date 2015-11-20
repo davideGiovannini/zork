@@ -25,6 +25,6 @@ public class Place {
     }
 
     public static enum PlaceType {
-        GRAVEYARD, WOODS, MINES,
+        GRAVEYARD, WOODS, MINES, THRONE_ROOM, SWAMP, CASTLE, CHURCH
     }
 }
