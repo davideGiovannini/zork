@@ -61,7 +61,7 @@ public class GameServlet extends HttpServlet {
         }
 
         //TODO improve victory restart
-        if(Action.ActionType.GET_CROWN.equals(actionType)){
+        if(Action.ActionType.RESTART_GAME.equals(actionType)){
             response.sendRedirect("game.html");
             session.invalidate();
             return;

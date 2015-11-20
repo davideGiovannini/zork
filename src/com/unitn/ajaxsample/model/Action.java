@@ -26,6 +26,6 @@ public class Action {
     }
 
     public static enum ActionType {
-        WAIT, ENTER, EXIT, DESCEND, GET_CROWN, GO_NORTH, GO_WEST, GO_EAST, GO_SOUTH;
+        WAIT, ENTER, EXIT, DESCEND, GET_CROWN, GO_NORTH, GO_WEST, GO_EAST, GO_SOUTH, RESTART_GAME
     }
 }

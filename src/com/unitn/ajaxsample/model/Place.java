@@ -58,6 +58,9 @@ public class Place {
             case TOMB:
                 actions.add(new Action(Action.ActionType.EXIT));
                 break;
+            case CROWNED:
+                actions.add(new Action(Action.ActionType.RESTART_GAME));
+                return actions;
         }
         actions.add(new Action(Action.ActionType.WAIT));
         return actions;
@@ -91,6 +94,11 @@ public class Place {
             case DESCEND:
                 break;
             case GET_CROWN:
+                switch (placeType){
+                    case THRONE_ROOM:
+                        placeType = PlaceType.CROWNED;
+                        break;
+                }
                 break;
             case GO_NORTH:
                 switch (placeType) {
@@ -163,6 +171,6 @@ public class Place {
     }
 
     public static enum PlaceType {
-        GRAVEYARD, WOODS, MINES, THRONE_ROOM, SWAMP, CASTLE, CHURCH, TOMB
+        GRAVEYARD, WOODS, MINES, THRONE_ROOM, SWAMP, CASTLE, CHURCH, TOMB, CROWNED
     }
 }

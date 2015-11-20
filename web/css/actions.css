@@ -84,3 +84,7 @@ div#actions{
 .GO_SOUTH{
     background-image: url("../img/actions/arrow.png");
 }
+
+.RESTART_GAME{
+    background-image: url("../img/actions/restart_game.png");
+}
