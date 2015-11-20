@@ -1,6 +1,5 @@
-
-
-var getXhttp = function(){
+// AJAX UTILITY FUNCTIONS
+var getXhttp = function () {
     var xhttp;
     if (window.XMLHttpRequest) {
         xhttp = new XMLHttpRequest();
@@ -11,12 +10,9 @@ var getXhttp = function(){
     return xhttp;
 };
 
-
-
-
-var doPost = function(path, data, callback){
+var doPost = function (path, data, callback) {
     var xhttp = getXhttp();
-    xhttp.onreadystatechange = function() {
+    xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             callback(xhttp);
         }
@@ -25,10 +21,9 @@ var doPost = function(path, data, callback){
     xhttp.send(data);
 };
 
-
-var doGet = function(path, callback){
+var doGet = function (path, callback) {
     var xhttp = getXhttp();
-    xhttp.onreadystatechange = function() {
+    xhttp.onreadystatechange = function () {
         if (xhttp.readyState === 4 && xhttp.status === 200) {
             callback(xhttp);
         }
@@ -38,43 +33,45 @@ var doGet = function(path, callback){
 };
 
 
-
-
-
-var refreshState = function(){
-    doGet("game", function(xhttp){
-        var xml = xhttp.responseXML,
-            actions = document.getElementById("actions"),
-            place = document.getElementById("place"),
-            xActions = xml.getElementsByTagName("action"),
-            xPlace = xml.getElementsByTagName("place")[0],
-            i,
-            node;
-
-        //CleanUp actions
-        while(actions.firstChild) {
-            actions.removeChild(actions.firstChild);
-        }
-
-        //Set actions
-        for (i = 0; i < xActions.length; i++) {
-            node = document.createElement("div");
-            node.setAttribute("class", xActions[i].getAttribute("class"));
-            node.setAttribute("onClick", "postAction(\""+node.getAttribute("class")+"\")");
-            actions.appendChild(node);
-        }
-
-        //Set place
-        place.setAttribute("class", xPlace.getAttribute("class"));
-
-    });
+var refreshState = function () {
+    doGet("game", updateStateFromXML);
 
 };
 
 
-var postAction = function(action){
-    doPost("game?"+action, action, function(xhttp){
-        alert(xhttp.responseText);
+var postAction = function (action) {
+    doPost("game?" + action, action, function (xhttp) {
+        try {
+            updateStateFromXML(xhttp);
+        }catch (error){
+            location.reload();
+        }
     });
 };
 
+
+var updateStateFromXML = function (xhttp) {
+    var xml = xhttp.responseXML,
+        actions = document.getElementById("actions"),
+        place = document.getElementById("place"),
+        xActions = xml.getElementsByTagName("action"),
+        xPlace = xml.getElementsByTagName("place")[0],
+        i,
+        node;
+
+    //CleanUp actions
+    while (actions.firstChild) {
+        actions.removeChild(actions.firstChild);
+    }
+
+    //Set actions
+    for (i = 0; i < xActions.length; i++) {
+        node = document.createElement("div");
+        node.setAttribute("class", xActions[i].getAttribute("class"));
+        node.setAttribute("onClick", "postAction(\"" + node.getAttribute("class") + "\")");
+        actions.appendChild(node);
+    }
+
+    //Set place
+    place.setAttribute("class", xPlace.getAttribute("class"));
+};

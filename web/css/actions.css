@@ -60,3 +60,7 @@ div#actions{
 .EXIT{
     background-image: url("../img/actions/exit.png");
 }
+
+.GET_CROWN{
+    background-image: url("../img/actions/get_crown.png");
+}
