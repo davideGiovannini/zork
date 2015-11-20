@@ -1,6 +1,19 @@
 
-body{
-    background-color: #303030;
-
+@font-face {
+    font-family: "Modern Antiqua";
+    src: url(../fonts/modern-antiqua/ModernAntiqua-Regular.ttf);
 }
 
+body{
+    background-color: #303030;
+}
+
+
+h1#place_title{
+    font-family: "Modern Antiqua";
+    color: whitesmoke;
+    text-align: center;
+    text-transform: lowercase;
+    font-size: 5em;
+
+}

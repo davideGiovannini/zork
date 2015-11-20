@@ -1,16 +1,21 @@
 
 
-div#actions > *:hover > h1.action_description{
+h1.action_description{
+    font-family: "Modern Antiqua", "Ubuntu Mono";
     color: #FFF;
+    opacity: 0;
     bottom: 0;
     position: fixed;
     left: 50%;
     margin-bottom: 2em;
     margin-right: -50%;
     transform: translate(-50%, -10vw);
-    opacity: 255;
+    transition: opacity 0.5s;
 }
 
-div#actions > * > h1.action_description{
-    opacity: 0;
+
+/*Turn description visible when hovering the action(its parent div)*/
+div#actions > *:hover > h1.action_description{
+    opacity: 255;
+    transition: opacity 1s;
 }

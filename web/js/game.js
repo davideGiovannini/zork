@@ -81,4 +81,5 @@ var updateStateFromXML = function (xhttp) {
 
     //Set place
     place.setAttribute("class", xPlace.getAttribute("class"));
+    document.getElementById("place_title").innerHTML = place.getAttribute("class");
 };

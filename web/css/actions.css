@@ -1,6 +1,5 @@
 
-
-div#actions{
+div#actions {
     /*background-color: #606060;*/
     height: 10vw;
     bottom: 0;
@@ -10,11 +9,12 @@ div#actions{
     margin-right: -50%;
     transform: translate(-50%, 0)
 }
-#actions > * {
+
+div#actions > * {
     display: inline-block;
     background-color: #606060;
-    background-repeat:no-repeat;
-    background-size:contain;
+    background-repeat: no-repeat;
+    background-size: contain;
 
     border-radius: 1em;
     padding: 1em;
@@ -24,67 +24,71 @@ div#actions{
     height: 8vw;
 }
 
-#actions > *:hover
-{
-    -moz-box-shadow: 0 0 10px #ccc;
-    -webkit-box-shadow: 0 0 10px #ccc;
-    box-shadow: 0 0 10px #ccc;
+div#actions > *:last-child {
+    margin-right: 1em;
 }
 
-#actions > *:active
-{
+div#actions > *:active {
     -moz-box-shadow: 0 0 10px #ccc;
     -webkit-box-shadow: 0 0 10px #000;
     box-shadow: 0 0 10px #000;
 }
 
-
-#actions > *:last-child {
-    margin-right: 1em;
+div#actions > *:hover {
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
 }
 
-.WAIT{
+div.WAIT {
     background-image: url("../img/actions/wait.png");
 }
 
-.ENTER{
+div.ENTER {
     background-image: url("../img/actions/enter.png");
 }
 
-.DESCEND{
+div.DESCEND {
     background-image: url("../img/actions/descend.png");
 }
 
-.EXIT{
+div.EXIT {
     background-image: url("../img/actions/exit.png");
 }
 
-.GET_CROWN{
+div.GET_CROWN {
     background-image: url("../img/actions/get_crown.png");
 }
 
-
-.GO_NORTH{
-    background-image: url("../img/actions/arrow.png");
-    transform: rotate(180deg);
-
+div.GO_NORTH {
+    background-image: url("../img/actions/arrowN.png");
 }
 
-.GO_WEST{
-    background-image: url("../img/actions/arrow.png");
-    transform: rotate(90deg);
-
+div.GO_WEST {
+    background-image: url("../img/actions/arrowW.png");
 }
 
-.GO_EAST{
-    background-image: url("../img/actions/arrow.png");
-    transform: rotate(-90deg);
+div.GO_EAST{
+    background-image: url("../img/actions/arrowE.png");
 }
 
-.GO_SOUTH{
-    background-image: url("../img/actions/arrow.png");
+div.GO_SOUTH {
+    background-image: url("../img/actions/arrowS.png");
 }
 
-.RESTART_GAME{
+div.RESTART_GAME {
     background-image: url("../img/actions/restart_game.png");
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
