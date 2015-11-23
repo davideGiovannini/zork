@@ -2,14 +2,16 @@
 
 h1.action_description{
     font-family: "Modern Antiqua", "Ubuntu Mono";
+    font-size: 6vh;
+    width: 80vw;
+    text-align: center;
     color: #FFF;
     opacity: 0;
     bottom: 0;
     position: fixed;
     left: 50%;
-    margin-bottom: 2em;
     margin-right: -50%;
-    transform: translate(-50%, -10vw);
+    transform: translate(-50%, -16vh);
     transition: opacity 0.5s;
 }
 

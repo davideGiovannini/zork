@@ -1,27 +1,25 @@
 
 div#actions {
     /*background-color: #606060;*/
-    height: 10vw;
     bottom: 0;
+    margin-bottom: 2vh;
     position: fixed;
     left: 50%;
-    margin-bottom: 2em;
     margin-right: -50%;
     transform: translate(-50%, 0)
 }
 
 div#actions > * {
     display: inline-block;
-    background-color: #606060;
-    background-repeat: no-repeat;
+    background: no-repeat;
     background-size: contain;
 
     border-radius: 1em;
     padding: 1em;
     margin-left: 1em;
 
-    width: 8vw;
-    height: 8vw;
+    width: 16vh;
+    height: 16vh;
 }
 
 div#actions > *:last-child {
@@ -40,43 +38,43 @@ div#actions > *:hover {
     box-shadow: 0 0 10px #ccc;
 }
 
-div.WAIT {
+div#actions > div.WAIT {
     background-image: url("../img/actions/wait.png");
 }
 
-div.ENTER {
+div#actions > div.ENTER {
     background-image: url("../img/actions/enter.png");
 }
 
-div.DESCEND {
+div#actions > div.DESCEND {
     background-image: url("../img/actions/descend.png");
 }
 
-div.EXIT {
+div#actions > div.EXIT {
     background-image: url("../img/actions/exit.png");
 }
 
-div.GET_CROWN {
+div#actions > div.GET_CROWN {
     background-image: url("../img/actions/get_crown.png");
 }
 
-div.GO_NORTH {
+div#actions > div.GO_NORTH {
     background-image: url("../img/actions/arrowN.png");
 }
 
-div.GO_WEST {
+div#actions > div.GO_WEST {
     background-image: url("../img/actions/arrowW.png");
 }
 
-div.GO_EAST{
+div#actions > div.GO_EAST{
     background-image: url("../img/actions/arrowE.png");
 }
 
-div.GO_SOUTH {
+div#actions > div.GO_SOUTH {
     background-image: url("../img/actions/arrowS.png");
 }
 
-div.RESTART_GAME {
+div#actions > div.RESTART_GAME {
     background-image: url("../img/actions/restart_game.png");
 }
 

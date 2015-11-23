@@ -1,14 +1,12 @@
 
 div#place{
-    background-color: #606390;
-    background-repeat:no-repeat;
+    background: no-repeat;
     background-size:contain;
 
-    height: 25vw;
-    width: 25vw;
+    height: 45vh;
+    width: 45vh;
 
     border-radius: 1em;
-    padding: 1em;
     position: absolute;
     top: 50%;
     left: 50%;
